@@ -42,7 +42,7 @@ export default class Formulario extends React.Component {
           valor={HsCatedras}
           onChange={(valor) => this.setstate({ HsCatedras: valor })}
         />
-        <div>
+        <div className="notas">
           <Input
             esNota={true}
             titulo="Nota"
@@ -51,8 +51,8 @@ export default class Formulario extends React.Component {
           />
         </div>
         <div className="botones">
-          <Boton titulo="+" onClick={() => alert("Hola")} />
           <Boton titulo="G" />
+          <Boton titulo="+" onClick={() => alert("Hola")} />
           <Boton titulo="B" />
         </div>
         <div></div>
