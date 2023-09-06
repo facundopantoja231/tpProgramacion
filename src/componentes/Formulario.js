@@ -19,27 +19,32 @@ export default class Formulario extends React.Component {
       <div className="Formulario">
         <h2 className="title">Registro de Materias</h2>
         <Input
+          esNota={false}
           titulo="ID"
           valor={ID}
           onChange={(valor) => this.setstate({ ID: valor })}
         />
         <Input
+          esNota={false}
           titulo="Materia"
           valor={Materia}
           onChange={(valor) => this.setstate({ Materia: valor })}
         />
         <Input
+          esNota={false}
           titulo="Docente"
           valor={Docente}
           onChange={(valor) => this.setstate({ Docente: valor })}
         />
         <Input
+          esNota={false}
           titulo="HsCatedras"
           valor={HsCatedras}
           onChange={(valor) => this.setstate({ HsCatedras: valor })}
         />
         <div>
           <Input
+            esNota={true}
             titulo="Nota"
             valor={Nota}
             onChange={(valor) => this.setstate({ Nota: valor })}
