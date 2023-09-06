@@ -8,6 +8,6 @@ export default class Accion extends React.Component {
 
   render() {
     const { titulo, onClick } = this.props;
-    return <div>6c</div>;
+    return <div> 6c</div>;
   }
 }

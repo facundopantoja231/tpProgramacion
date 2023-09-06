@@ -51,9 +51,9 @@ export default class Formulario extends React.Component {
           />
         </div>
         <div className="botones">
-          <Boton titulo="G" />
-          <Boton titulo="+" onClick={() => alert("Hola")} />
-          <Boton titulo="B" />
+          <Boton titulo="G" onClick={() => alert("Guardado")}/>
+          <Boton titulo="+" onClick={() => alert("Agregado")} />
+          <Boton titulo="B" onClick={() => alert("Borrado")}/>
         </div>
         <div></div>
       </div>
