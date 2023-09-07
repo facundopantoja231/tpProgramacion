@@ -13,7 +13,16 @@ export default class Formulario extends React.Component {
     };
   }
 
+  agregarNota() {
+    const divNotas = document.getElementById("notas");
+    const notaHTML = `<input class="notita" type="number" name="nota" placeholder="Nota">`; 
+    divNotas.innerHTML += notaHTML;  
+
+}
+
   render() {
+
+
     const { ID, Materia, Docente, HsCatedras, Nota } = this.state;
     return (
       <div className="Formulario">
@@ -42,7 +51,7 @@ export default class Formulario extends React.Component {
           valor={HsCatedras}
           onChange={(valor) => this.setstate({ HsCatedras: valor })}
         />
-        <div className="notas">
+        <div className="notas" id="notas">
           <Input
             esNota={true}
             titulo="Nota"
@@ -52,7 +61,7 @@ export default class Formulario extends React.Component {
         </div>
         <div className="botones">
           <Boton titulo="G" onClick={() => alert("Guardado")}/>
-          <Boton titulo="+" onClick={() => alert("Agregado")} />
+          <Boton titulo="+" onClick={() => this.agregarNota()} />
           <Boton titulo="B" onClick={() => alert("Borrado")}/>
         </div>
         <div></div>
