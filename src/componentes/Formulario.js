@@ -9,15 +9,25 @@ export default class Formulario extends React.Component {
       Materia: "",
       Docente: "",
       HsCatedras: "",
-      Nota: ""
+      Nota: [""]
     };
   }
 
   agregarNota() {
+    let nuevo = this.state.Nota;
+    nuevo.push("")
+    this.setState({Nota: nuevo})
+    /*
     const divNotas = document.getElementById("notas");
-    const notaHTML = `<input class="notita" type="number" name="nota" placeholder="Nota">`; 
+    const notaHTML = `<Input class="notita" titulo="Nota" />`; 
     divNotas.innerHTML += notaHTML;  
+*/
+}
 
+editarNota(index, valor) {
+  let nuevo = this.state.Nota;
+  nuevo[index] = valor;
+  this.setState({Nota: nuevo})
 }
 
   render() {
@@ -52,12 +62,17 @@ export default class Formulario extends React.Component {
           onChange={(valor) => this.setstate({ HsCatedras: valor })}
         />
         <div className="notas" id="notas">
-          <Input
-            esNota={true}
-            titulo="Nota"
-            valor={Nota}
-            onChange={(valor) => this.setstate({ Nota: valor })}
-          />
+          {Nota.map((item, index) => {
+            return(
+              <Input
+                key={index}
+                esNota={true}
+                titulo="Nota"
+                valor={item}
+                onChange={(valor) => this.editarNota(index, valor)}
+              />
+            )
+          })}
         </div>
         <div className="botones">
           <Boton titulo="G" onClick={() => alert("Guardado")}/>

@@ -9,6 +9,9 @@ export default class Card extends React.Component {
 
   render() {
     const { titulo, onClick } = this.props;
-    return <div>b</div>;
-  }
+    return(
+    <div className="">
+      
+    </div>
+  )};
 }
