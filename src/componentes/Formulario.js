@@ -1,6 +1,13 @@
 import React from "react";
 import Input from "./Input";
 import Boton from "./Boton";
+
+// imagenes
+
+import bin from "../imagenes/bin.png";
+import diskette from "../imagenes/diskette.png";
+import add from "../imagenes/add.png";
+
 export default class Formulario extends React.Component {
   constructor(props) {
     super(props);
@@ -75,9 +82,9 @@ editarNota(index, valor) {
           })}
         </div>
         <div className="botones">
-          <Boton titulo="G" onClick={() => alert("Guardado")}/>
-          <Boton titulo="+" onClick={() => this.agregarNota()} />
-          <Boton titulo="B" onClick={() => alert("Borrado")}/>
+          <Boton imageButton={diskette} altButton="Guardar Notas" onClick={() => alert("Guardado")}/>
+          <Boton imageButton={add} altButton="Añadir Nota" onClick={() => this.agregarNota()} />
+          <Boton imageButton={bin} altButton="Eliminar Notas" onClick={() => alert("Borrado")}/>
         </div>
         <div></div>
       </div>

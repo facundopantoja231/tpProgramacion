@@ -6,10 +6,10 @@ export default class Boton extends React.Component {
     this.state = {};
   }
   render() {
-    const { titulo, onClick } = this.props;
+    const { onClick, imageButton, altButton } = this.props;
     return (
       <span className="Boton" onClick={() => onClick()}>
-        {titulo}
+        <img src={imageButton} alt={altButton}/>
       </span>
     );
   }
