@@ -10,8 +10,16 @@ export default class Card extends React.Component {
   render() {
     const { titulo, onClick } = this.props;
     return(
-    <div className="">
-      
+    <div className="Card">
+      <div className="Datos">
+        <span>ID:</span>
+        <span>Materia:</span>
+        <span>Docente:</span>
+        <span>HsCatedras:</span>
+      </div>
+
+
+      <Accion />
     </div>
   )};
 }

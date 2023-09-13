@@ -15,7 +15,7 @@ export default class Input extends React.Component {
             esNota=${true}
             titulo="Nota"
             valor=${Nota}
-            onChange=${(valor) => this.setstate({ Nota: valor })}
+            onChange=${(valor) => this.setState({ Nota: valor })}
           />
   		` 
       

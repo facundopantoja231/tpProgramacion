@@ -48,25 +48,25 @@ editarNota(index, valor) {
           esNota={false}
           titulo="ID"
           valor={ID}
-          onChange={(valor) => this.setstate({ ID: valor })}
+          onChange={(valor) => this.setState({ ID: valor })}
         />
         <Input
           esNota={false}
           titulo="Materia"
           valor={Materia}
-          onChange={(valor) => this.setstate({ Materia: valor })}
+          onChange={(valor) => this.setState({ Materia: valor })}
         />
         <Input
           esNota={false}
           titulo="Docente"
           valor={Docente}
-          onChange={(valor) => this.setstate({ Docente: valor })}
+          onChange={(valor) => this.setState({ Docente: valor })}
         />
         <Input
           esNota={false}
           titulo="HsCatedras"
           valor={HsCatedras}
-          onChange={(valor) => this.setstate({ HsCatedras: valor })}
+          onChange={(valor) => this.setState({ HsCatedras: valor })}
         />
         <div className="notas" id="notas">
           {Nota.map((item, index) => {

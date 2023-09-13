@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../componentes/Card";
 
 export default class Listado extends React.Component {
   constructor(props) {
@@ -7,6 +8,13 @@ export default class Listado extends React.Component {
   }
 
   render() {
-    return;
+    return(
+      <div className="listado">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    );
   }
 }

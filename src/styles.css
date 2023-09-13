@@ -113,3 +113,33 @@
     position: relative;
     user-select: none;
 }
+
+
+.Card {
+	height: 40px;
+	background-color: #C87D6D;
+	position: relative;
+}
+
+.equis {
+	color: red;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 1.5rem;
+	position: absolute;
+	right: 15px;
+	top: 5px;
+}
+
+.Card span {
+	font-size: 1.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Datos {
+	width: 80%;
+	display: flex;
+	gap: 60px;
+}
