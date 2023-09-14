@@ -8,13 +8,6 @@ export default class Listado extends React.Component {
   }
 
   render() {
-    return(
-      <div className="listado">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    );
+    return <div className="listado"></div>;
   }
 }
