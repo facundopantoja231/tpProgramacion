@@ -9,11 +9,17 @@ import "./styles.css";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      Materias: [],
+    };
   }
 
-  obtenerMateria() {
-    const url = "http://192.168.0.196:3010/api/materias/";
+  componentDidMount() {
+    this.obtenerMaterias();
+  }
+
+  obtenerMaterias() {
+    const url = "https://hd6v8q-3000.csb.app/api/materias";
 
     axios
       .get(url)
@@ -33,7 +39,8 @@ export default class App extends React.Component {
   guardar(datos) {
     const url = "http://192.168.0.196:3010/api/materias/";
 
-    axios.post(url, datos)
+    axios
+      .post(url, datos)
       .then((resp) => {
         console.log(resp.data);
         obtenerMateria();
